@@ -1,0 +1,104 @@
+|project01_demo
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+a[4] => a[4].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+b[4] => b[4].IN1
+r[0] <= project01:testme.port0
+r[1] <= project01:testme.port0
+
+
+|project01_demo|project01:testme
+r[0] <= Encoder:enc.port0
+r[1] <= Encoder:enc.port0
+a[0] => a[0].IN3
+a[1] => a[1].IN3
+a[2] => a[2].IN3
+a[3] => a[3].IN3
+a[4] => a[4].IN3
+b[0] => b[0].IN3
+b[1] => b[1].IN3
+b[2] => b[2].IN3
+b[3] => b[3].IN3
+b[4] => b[4].IN3
+
+
+|project01_demo|project01:testme|AEqualB:AEB
+M <= g6.DB_MAX_OUTPUT_PORT_TYPE
+k[0] <= g5.DB_MAX_OUTPUT_PORT_TYPE
+k[1] <= g4.DB_MAX_OUTPUT_PORT_TYPE
+k[2] <= g3.DB_MAX_OUTPUT_PORT_TYPE
+k[3] <= g2.DB_MAX_OUTPUT_PORT_TYPE
+k[4] <= g1.DB_MAX_OUTPUT_PORT_TYPE
+a[0] => g5.IN0
+a[1] => g4.IN0
+a[2] => g3.IN0
+a[3] => g2.IN0
+a[4] => g1.IN0
+b[0] => g5.IN1
+b[1] => g4.IN1
+b[2] => g3.IN1
+b[3] => g2.IN1
+b[4] => g1.IN1
+
+
+|project01_demo|project01:testme|AGreaterThanB:AGTB
+Y <= g11.DB_MAX_OUTPUT_PORT_TYPE
+a[0] => g10.IN0
+a[1] => g9.IN0
+a[2] => g8.IN0
+a[3] => g7.IN0
+a[4] => g6.IN0
+b[0] => g10.IN1
+b[1] => g9.IN1
+b[2] => g8.IN1
+b[3] => g7.IN1
+b[4] => g6.IN1
+k[0] => ~NO_FANOUT~
+k[1] => g10.IN2
+k[2] => g9.IN2
+k[2] => g10.IN3
+k[3] => g8.IN2
+k[3] => g9.IN3
+k[3] => g10.IN4
+k[4] => g7.IN2
+k[4] => g8.IN3
+k[4] => g9.IN4
+k[4] => g10.IN5
+
+
+|project01_demo|project01:testme|ABEqualZero:ABEZ
+N <= g.DB_MAX_OUTPUT_PORT_TYPE
+a[0] => g.IN0
+a[1] => g.IN1
+a[2] => g.IN2
+a[3] => g.IN3
+a[4] => g.IN4
+b[0] => g.IN5
+b[1] => g.IN6
+b[2] => g.IN7
+b[3] => g.IN8
+b[4] => g.IN9
+
+
+|project01_demo|project01:testme|ASmallerThanB:ASTB
+Z <= g.DB_MAX_OUTPUT_PORT_TYPE
+Y => g.IN0
+M => g.IN1
+
+
+|project01_demo|project01:testme|Encoder:enc
+r[0] <= g3.DB_MAX_OUTPUT_PORT_TYPE
+r[1] <= g1.DB_MAX_OUTPUT_PORT_TYPE
+I3 => g2.IN0
+I1 => g1.IN0
+I1 => g2.IN1
+I0 => g1.IN1
+I0 => g3.IN1
+
+

@@ -1,0 +1,79 @@
+# Reading C:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do project01_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/KEVSER/Desktop/ogretim/BilMuh3_1/COMPUTERORGANISATION/yolcu_kevser_131044072_restored/kevser_yolcu_131044072_restored {C:/Users/KEVSER/Desktop/ogretim/BilMuh3_1/COMPUTERORGANISATION/yolcu_kevser_131044072_restored/kevser_yolcu_131044072_restored/project01.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module project01
+# 
+# Top level modules:
+# 	project01
+# vlog -vlog01compat -work work +incdir+C:/Users/KEVSER/Desktop/ogretim/BilMuh3_1/COMPUTERORGANISATION/yolcu_kevser_131044072_restored/kevser_yolcu_131044072_restored {C:/Users/KEVSER/Desktop/ogretim/BilMuh3_1/COMPUTERORGANISATION/yolcu_kevser_131044072_restored/kevser_yolcu_131044072_restored/AGreaterThanB.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module AGreaterThanB
+# 
+# Top level modules:
+# 	AGreaterThanB
+# vlog -vlog01compat -work work +incdir+C:/Users/KEVSER/Desktop/ogretim/BilMuh3_1/COMPUTERORGANISATION/yolcu_kevser_131044072_restored/kevser_yolcu_131044072_restored {C:/Users/KEVSER/Desktop/ogretim/BilMuh3_1/COMPUTERORGANISATION/yolcu_kevser_131044072_restored/kevser_yolcu_131044072_restored/AEqualB.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module AEqualB
+# 
+# Top level modules:
+# 	AEqualB
+# vlog -vlog01compat -work work +incdir+C:/Users/KEVSER/Desktop/ogretim/BilMuh3_1/COMPUTERORGANISATION/yolcu_kevser_131044072_restored/kevser_yolcu_131044072_restored {C:/Users/KEVSER/Desktop/ogretim/BilMuh3_1/COMPUTERORGANISATION/yolcu_kevser_131044072_restored/kevser_yolcu_131044072_restored/ABEqualZero.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ABEqualZero
+# 
+# Top level modules:
+# 	ABEqualZero
+# vlog -vlog01compat -work work +incdir+C:/Users/KEVSER/Desktop/ogretim/BilMuh3_1/COMPUTERORGANISATION/yolcu_kevser_131044072_restored/kevser_yolcu_131044072_restored {C:/Users/KEVSER/Desktop/ogretim/BilMuh3_1/COMPUTERORGANISATION/yolcu_kevser_131044072_restored/kevser_yolcu_131044072_restored/ASmallerThanB.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ASmallerThanB
+# 
+# Top level modules:
+# 	ASmallerThanB
+# vlog -vlog01compat -work work +incdir+C:/Users/KEVSER/Desktop/ogretim/BilMuh3_1/COMPUTERORGANISATION/yolcu_kevser_131044072_restored/kevser_yolcu_131044072_restored {C:/Users/KEVSER/Desktop/ogretim/BilMuh3_1/COMPUTERORGANISATION/yolcu_kevser_131044072_restored/kevser_yolcu_131044072_restored/Encoder.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Encoder
+# 
+# Top level modules:
+# 	Encoder
+# vlog -vlog01compat -work work +incdir+C:/Users/KEVSER/Desktop/ogretim/BilMuh3_1/COMPUTERORGANISATION/yolcu_kevser_131044072_restored/kevser_yolcu_131044072_restored {C:/Users/KEVSER/Desktop/ogretim/BilMuh3_1/COMPUTERORGANISATION/yolcu_kevser_131044072_restored/kevser_yolcu_131044072_restored/project01_demo.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module project01_demo
+# 
+# Top level modules:
+# 	project01_demo
+# 
+vlog -reportprogress 300 -work work C:/Users/KEVSER/Desktop/ogretim/BilMuh3_1/COMPUTERORGANISATION/yolcu_kevser_131044072_restored/kevser_yolcu_131044072_restored/project01_test.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module project01_test
+# 
+# Top level modules:
+# 	project01_test
+vsim work.project01_test
+# vsim work.project01_test 
+# Loading work.project01_test
+# Loading work.project01
+# Loading work.AEqualB
+# Loading work.AGreaterThanB
+# Loading work.ABEqualZero
+# Loading work.ASmallerThanB
+# Loading work.Encoder
+add wave -position insertpoint  \
+sim:/project01_test/r \
+sim:/project01_test/a \
+sim:/project01_test/b
+step -current
+# InA = 00000 InB = 00000 r = 00
+# InA = 10110 InB = 00010 r = 01
+# InA = 00001 InB = 10000 r = 10
+# InA = 01000 InB = 01000 r = 11
